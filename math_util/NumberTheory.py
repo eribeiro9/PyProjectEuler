@@ -17,20 +17,21 @@ def fibonacci_under(limit, starts_with_two_ones=True):
 
 
 def primes_under(limit):
-    # TODO: efficiency, efficiency, efficiency
+    # TODO: efficiency
     if limit <= 2:
         return list()
     primes = [2]
-    i = 3
-    while i < limit:
+    for i in range(3, limit):
         add = True
         i_sqrt = math.floor(math.sqrt(i))
         for prime in primes:
-            if prime <= i_sqrt and is_factor_of(prime, i):
+            if prime > i_sqrt:
+                break
+            elif is_factor_of(prime, i):
                 add = False
+                break
         if add:
             primes.append(i)
-        i += 1
     return primes
 
 

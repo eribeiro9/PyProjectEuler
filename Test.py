@@ -1,3 +1,3 @@
-from math_util import General
+from math_util import NumberTheory
 
-print(General.is_palindrome(105))
+print(len(NumberTheory.primes_under(3000000)))
