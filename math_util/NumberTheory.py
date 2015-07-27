@@ -7,6 +7,14 @@ def is_factor_of(factor, multiple):
     return multiple % factor == 0
 
 
+def factors_of(num):
+    factors = list()
+    for factor in range(1, num + 1):
+        if is_factor_of(factor, num):
+            factors.append(factor)
+    return factors
+
+
 def fibonacci_under(limit, starts_with_two_ones=True):
     fibonacci = ([1, 2], [1, 1])[starts_with_two_ones]
     next_num = fibonacci[-1] + fibonacci[-2]
@@ -23,7 +31,7 @@ def primes_under(limit):
     primes = [2]
     for i in range(3, limit):
         add = True
-        i_sqrt = math.floor(math.sqrt(i))
+        i_sqrt = math.sqrt(i)
         for prime in primes:
             if prime > i_sqrt:
                 break

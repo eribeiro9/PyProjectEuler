@@ -1,3 +1,4 @@
+
 from math_util import NumberTheory
 
-print(str(NumberTheory.first_primes(50)))
+print(len(NumberTheory.primes_under(3000000)))
