@@ -1,7 +1,3 @@
-v1 = [1, 2, 3]
-v2 = [1, 2, 3]
+from math_util import General
 
-v3 = v1 + v2
-
-for x in v3:
-    print(x)
+print(General.is_palindrome(105))

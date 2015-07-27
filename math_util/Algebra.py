@@ -9,5 +9,11 @@ def square_of_sum(limit):
     return sum(range(1, limit + 1)) ** 2
 
 
-# create multiplication table from two lists
-# def multiplication_table(list1, list2):
+def multiplication_table(list1, list2):
+    mult_table = list()
+    for l1 in list1:
+        next_row = list()
+        for l2 in list2:
+            next_row.append(l1 * l2)
+        mult_table.append(next_row)
+    return mult_table
