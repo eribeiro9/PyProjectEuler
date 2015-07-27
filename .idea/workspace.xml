@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0650d81-5d75-4c85-8399-d8211674b2e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/math_util/Algebra.py" afterPath="$PROJECT_DIR$/math_util/Algebra.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/math_util/General.py" afterPath="$PROJECT_DIR$/math_util/General.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/math_util/LinearAlgebra.py" afterPath="$PROJECT_DIR$/math_util/LinearAlgebra.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/math_util/NumberTheory.py" afterPath="$PROJECT_DIR$/math_util/NumberTheory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/problems/Problem004.py" afterPath="$PROJECT_DIR$/problems/Problem004.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Project Euler.iml" afterPath="$PROJECT_DIR$/.idea/Project Euler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.py" afterPath="$PROJECT_DIR$/Test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a0650d81-5d75-4c85-8399-d8211674b2e7" name="Default" comment="" />
     <ignored path="Project Euler.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,36 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Algebra.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/math_util/Algebra.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Problem004.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/problems/Problem004.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="General.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/math_util/General.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,21 +31,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinearAlgebra.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/math_util/LinearAlgebra.py">
+      <file leaf-file-name="NumberTheory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/math_util/NumberTheory.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberTheory.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/math_util/NumberTheory.py">
+      <file leaf-file-name="Problem005.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/problems/Problem005.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5252809">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.07162921">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,12 +73,13 @@
         <option value="$PROJECT_DIR$/Problems/Problem002.py" />
         <option value="$PROJECT_DIR$/MathUtil/NumberTheory.py" />
         <option value="$PROJECT_DIR$/math_util/Statistics.py" />
-        <option value="$PROJECT_DIR$/math_util/NumberTheory.py" />
         <option value="$PROJECT_DIR$/math_util/Algebra.py" />
         <option value="$PROJECT_DIR$/math_util/LinearAlgebra.py" />
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/problems/Problem004.py" />
         <option value="$PROJECT_DIR$/math_util/General.py" />
+        <option value="$PROJECT_DIR$/math_util/NumberTheory.py" />
+        <option value="$PROJECT_DIR$/problems/Problem005.py" />
       </list>
     </option>
   </component>
@@ -157,7 +118,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -254,7 +215,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
@@ -478,6 +439,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,22 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/math_util/Algebra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/math_util/General.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -786,10 +736,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/math_util/Algebra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4536517">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/math_util/NumberTheory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5252809">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problems/Problem005.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07162921">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
