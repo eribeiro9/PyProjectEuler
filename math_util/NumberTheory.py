@@ -35,6 +35,29 @@ def primes_under(limit):
     return primes
 
 
+def first_primes(limit):
+    # TODO: efficiency
+    primes = [2]
+    if limit < 1:
+        return list()
+    elif limit == 1:
+        return primes
+    i = 3
+    while len(primes) < limit:
+        add = True
+        i_sqrt = math.floor(math.sqrt(i))
+        for prime in primes:
+            if prime > i_sqrt:
+                break
+            elif is_factor_of(prime, i):
+                add = False
+                break
+        if add:
+            primes.append(i)
+        i += 1
+    return primes
+
+
 def prime_factors_of(num):
     factors = list()
     num_sqrt = math.floor(math.sqrt(num))
