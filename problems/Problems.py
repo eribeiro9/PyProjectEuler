@@ -2,43 +2,25 @@ __author__ = 'Eric'
 
 import time
 from math_util import Algebra, General, NumberTheory
+from utilities import HTMLScraper
 
 
 def solve(problem):
-    if problem == 1:
-        time_solve(solve001, ([3, 5], 1000))
-    elif problem == 2:
-        time_solve(solve002, (4000000, False))
-    elif problem == 3:
-        time_solve(solve003, [600851475143])
-    elif problem == 4:
-        time_solve(solve004, [1000])
-    elif problem == 5:
-        time_solve(solve005, [20])
-    elif problem == 6:
-        time_solve(solve006, [100])
-    elif problem == 7:
-        time_solve(solve007, [10001])
-    elif problem == 8:
-        # time_solve(solve008, (read num from site, 13))
-        return
-    elif problem == 9:
-        # solved on paper
-        return
-    elif problem == 10:
-        time_solve(solve010, [2000000])
+    (result, time_) = time_solve(solve_args[problem][0], solve_args[problem][1])
+    print(problem, result, "{0:.4f}".format(time_) + "ms", sep="        ")
+
+
+def solve_all():
+    problems = list(solve_args)
+    for problem in problems:
+        solve(problem)
 
 
 def time_solve(func, args):
     time.clock()
     result = func(*args)
     time_ = time.clock()
-    print("\n" + str(result))
-    units = "s"
-    if time_ < 0.1:
-        time_ *= 1000
-        units = "ms"
-    print("\n" + "{0:.4f}".format(time_) + units)
+    return result, time_ * 1000
 
 
 # region Problems
@@ -102,3 +84,16 @@ def solve010(limit):
     return sum(primes)
 
 # endregion
+
+
+solve_args = {
+    1: (solve001, ([3, 5], 1000)),
+    2: (solve002, (4000000, False)),
+    3: (solve003, [600851475143]),
+    4: (solve004, [1000]),
+    5: (solve005, [20]),
+    6: (solve006, [100]),
+    7: (solve007, [10001]),
+    8: (solve008, (HTMLScraper.problem8(), 13)),
+    10: (solve010, [2000000])
+}

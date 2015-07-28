@@ -1,4 +1,5 @@
 
-from math_util import NumberTheory
+from problems import Problems
 
-print(len(NumberTheory.primes_under(3000000)))
+
+Problems.solve_all()

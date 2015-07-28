@@ -105,9 +105,11 @@ def prime_factors_of(num):
     for choice in choices:
         while is_factor_of(choice, num):
             factors.append(choice)
-            num /= choice
+            num //= choice
             if num == 1:
                 return factors
-    return ([num], factors)[len(factors) > 0]
+    if num > 1:
+        factors.append(num)
+    return factors
 
 # endregion

@@ -16,6 +16,10 @@ def product(list_):
     return reduce(lambda x, y: x * y, list_)
 
 
+def product_up_to(limit):
+    return limit * (limit + 1) / 2 # TODO: WRONG
+
+
 def smallest_multiple(limit):
     product_ = product(range(1, limit + 1))
     primes = NumberTheory.primes_under(limit)
