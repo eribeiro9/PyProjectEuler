@@ -1,10 +1,6 @@
 __author__ = 'Eric'
 
-from math_util import Algebra
+from problems import Problems
 
 
-limit = 20
-
-result = Algebra.smallest_multiple(limit)
-
-print(result)
+Problems.solve(5)

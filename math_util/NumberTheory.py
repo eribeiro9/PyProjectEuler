@@ -3,6 +3,8 @@ __author__ = 'eribeiro'
 import math
 
 
+# region Factors/Multiples
+
 def is_factor_of(factor, multiple):
     return multiple % factor == 0
 
@@ -15,6 +17,22 @@ def factors_of(num):
     return factors
 
 
+def sum_of_multiples_under(factors, limit):
+    sum_ = 0
+    for multiple in range(1, limit):
+        add = False
+        for factor in factors:
+            if is_factor_of(factor, multiple):
+                add = True
+        if add:
+            sum_ += multiple
+    return sum_
+
+# endregion
+
+
+# region Fibonacci
+
 def fibonacci_under(limit, starts_with_two_ones=True):
     fibonacci = ([1, 2], [1, 1])[starts_with_two_ones]
     next_num = fibonacci[-1] + fibonacci[-2]
@@ -23,6 +41,19 @@ def fibonacci_under(limit, starts_with_two_ones=True):
         next_num = fibonacci[-1] + fibonacci[-2]
     return fibonacci
 
+
+def first_fibonacci(limit, starts_with_two_ones=True):
+    fibonacci = ([1, 2], [1, 1])[starts_with_two_ones]
+    next_num = fibonacci[-1] + fibonacci[-2]
+    while len(fibonacci) <= limit:
+        fibonacci.append(next_num)
+        next_num = fibonacci[-1] + fibonacci[-2]
+    return fibonacci
+
+# endregion
+
+
+# region Primes
 
 def primes_under(limit):
     # TODO: efficiency
@@ -79,14 +110,4 @@ def prime_factors_of(num):
                 return factors
     return ([num], factors)[len(factors) > 0]
 
-
-def sum_of_multiples_under(factors, limit):
-    sum_ = 0
-    for multiple in range(1, limit):
-        add = False
-        for factor in factors:
-            if is_factor_of(factor, multiple):
-                add = True
-        if add:
-            sum_ += multiple
-    return sum_
+# endregion

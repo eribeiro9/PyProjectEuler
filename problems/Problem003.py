@@ -1,9 +1,6 @@
 __author__ = 'eribeiro'
 
-from math_util import NumberTheory
+from problems import Problems
 
 
-limit = 600851475143
-
-factors = NumberTheory.prime_factors_of(limit)
-print(max(factors))
+Problems.solve(3)

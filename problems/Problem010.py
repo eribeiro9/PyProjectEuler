@@ -1,10 +1,6 @@
 __author__ = 'eribeiro'
 
-from math_util import NumberTheory
+from problems import Problems
 
 
-limit = 2000000
-
-primes = NumberTheory.primes_under(limit)
-
-print(sum(primes))
+Problems.solve(10)

@@ -1,10 +1,6 @@
 __author__ = 'eribeiro'
 
-from math_util import NumberTheory
+from problems import Problems
 
 
-limit = 10001
-
-prime = max(NumberTheory.first_primes(limit))
-
-print(prime)
+Problems.solve(7)
