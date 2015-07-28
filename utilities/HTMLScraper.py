@@ -14,3 +14,5 @@ def problem8():
     html = str(html_from_url(url))
     nums = re.findall('\d{50}', html)
     return "".join(nums)
+
+# TODO: 11,13,18

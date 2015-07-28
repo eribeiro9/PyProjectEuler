@@ -4,6 +4,7 @@ from math_util import NumberTheory
 
 limit = 125 #9 seconds for 125
 
+# TODO: iterate over n for n * (n + 1) / 2
 num = 0
 add = 1
 
