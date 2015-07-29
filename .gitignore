@@ -1,6 +1,2 @@
 .idea/workspace.xml
-math_util/__pycache__/Algebra.cpython-34.pyc
-math_util/__pycache__/General.cpython-34.pyc
-math_util/__pycache__/NumberTheory.cpython-34.pyc
-problems/__pycache__/Problems.cpython-34.pyc
-utilities/__pycache__/HTMLScraper.cpython-34.pyc
+**/__pycache__/
