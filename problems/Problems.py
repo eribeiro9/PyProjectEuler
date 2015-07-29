@@ -1,8 +1,8 @@
 __author__ = 'Eric'
 
-import time
+from timeit import default_timer as timer
 from math_util import Algebra, General, NumberTheory
-from utilities import HTMLScraper
+from utilities import CSVReader
 
 
 def solve(problem):
@@ -17,10 +17,10 @@ def solve_all():
 
 
 def time_solve(func, args):
-    time.clock()
+    start = timer()
     result = func(*args)
-    time_ = time.clock()
-    return result, time_ * 1000
+    end = timer()
+    return result, (end - start) * 1000
 
 
 # region Problems
@@ -79,6 +79,11 @@ def solve008(num, length):
     return max_product
 
 
+def solve009():
+    # Solved on paper
+    return 31875000
+
+
 def solve010(limit):
     primes = NumberTheory.primes_under(limit)
     return sum(primes)
@@ -94,6 +99,7 @@ solve_args = {
     5: (solve005, [20]),
     6: (solve006, [100]),
     7: (solve007, [10001]),
-    8: (solve008, (HTMLScraper.problem8(), 13)),
+    8: (solve008, (CSVReader.problem8(), 13)),
+    9: (solve009, []),
     10: (solve010, [2000000])
 }
