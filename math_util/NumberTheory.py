@@ -17,6 +17,9 @@ def factors_of(num):
     return factors
 
 
+# TODO: def num_factors_of(num):
+
+
 def sum_of_multiples_under(factors, limit):
     sum_ = 0
     for multiple in range(1, limit):
