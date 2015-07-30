@@ -63,7 +63,7 @@ def primes_under(limit):
     if limit <= 2:
         return list()
     primes = [2]
-    for i in range(3, limit):
+    for i in range(3, limit, 2):
         add = True
         i_sqrt = math.sqrt(i)
         for prime in primes:

@@ -5,15 +5,18 @@ from math_util import Algebra, General, NumberTheory
 from utilities import CSVReader
 
 
-def solve(problem):
+def solve(problem, spoilers=True):
     (result, time_) = time_solve(solve_args[problem][0], solve_args[problem][1])
-    print(problem, result, "{0:.4f}".format(time_) + "ms", sep="        ")
+    if spoilers:
+        print(problem, result, "{0:.4f}".format(time_) + "ms", sep="        ")
+    else:
+        print(problem, "{0:.4f}".format(time_) + "ms", sep="        ")
 
 
-def solve_all():
+def solve_all(spoilers=True):
     problems = list(solve_args)
     for problem in problems:
-        solve(problem)
+        solve(problem, spoilers)
 
 
 def time_solve(func, args):
@@ -81,6 +84,7 @@ def solve008(num, length):
 
 def solve009():
     # Solved on paper
+    # TODO: Write solution
     return 31875000
 
 
@@ -92,14 +96,14 @@ def solve010(limit):
 
 
 solve_args = {
-    1: (solve001, ([3, 5], 1000)),
-    2: (solve002, (4000000, False)),
+    1: (solve001, [[3, 5], 1000]),
+    2: (solve002, [4000000, False]),
     3: (solve003, [600851475143]),
     4: (solve004, [1000]),
     5: (solve005, [20]),
     6: (solve006, [100]),
     7: (solve007, [10001]),
-    8: (solve008, (CSVReader.problem8(), 13)),
-    9: (solve009, []),
+    8: (solve008, [CSVReader.problem8(), 13]),
+    9: (solve009, list()),
     10: (solve010, [2000000])
 }

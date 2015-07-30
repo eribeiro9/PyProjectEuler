@@ -10,4 +10,7 @@ from math_util import Algebra, NumberTheory
 #test = data[0]
 #test = [int(x) for x in test]
 
-print(str(Algebra.product(NumberTheory.first_primes(225))))
+#print(str(Algebra.product(NumberTheory.first_primes(225))))
+
+result, time_ = Problems.time_solve(NumberTheory.primes_under, [3000000])
+print(time_)
