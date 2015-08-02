@@ -1,7 +1,7 @@
 __author__ = 'Eric'
 
 from timeit import default_timer as timer
-from math_util import Algebra, General, NumberTheory
+from math_util import Basic, General, NumberTheory
 from utilities import CSVReader
 
 
@@ -49,7 +49,7 @@ def solve003(limit):
 def solve004(digit_size):
     check_size = digit_size // 10
     checks = range(digit_size - check_size, digit_size)
-    mult_table = Algebra.multiplication_table(checks, checks)
+    mult_table = Basic.multiplication_table(checks, checks)
     palindromes = list()
     for row in mult_table:
         for num in row:
@@ -59,12 +59,12 @@ def solve004(digit_size):
 
 
 def solve005(limit):
-    return Algebra.smallest_multiple(limit)
+    return NumberTheory.smallest_multiple(limit)
 
 
 def solve006(size):
-    square_of_sum = Algebra.square_of_sum(size)
-    sum_of_squares = Algebra.sum_of_squares(size)
+    square_of_sum = Basic.square_of_sum(size)
+    sum_of_squares = Basic.sum_of_squares(size)
     return square_of_sum - sum_of_squares
 
 
@@ -76,7 +76,7 @@ def solve008(num, length):
     digits = [int(i) for i in list(num)]
     max_product = 1
     for i in range(len(num) - length + 1):
-        product = Algebra.product(digits[i:i + length])
+        product = Basic.product(digits[i:i + length])
         if product > max_product:
             max_product = product
     return max_product
@@ -92,6 +92,17 @@ def solve010(limit):
     primes = NumberTheory.primes_under(limit)
     return sum(primes)
 
+
+def solve012(limit):
+    num = 2
+    while NumberTheory.num_factors_of(Basic.sum_up_to(num)) <= limit:
+        num += 1
+    return Basic.sum_up_to(num)
+
+
+def solve013(nums, digits):
+    return General.first_digits(sum(nums), digits)
+
 # endregion
 
 
@@ -105,5 +116,8 @@ solve_args = {
     7: (solve007, [10001]),
     8: (solve008, [CSVReader.problem8(), 13]),
     9: (solve009, list()),
-    10: (solve010, [2000000])
+    10: (solve010, [2000000]),
+    # 11: (solve011, [CSVReader.problem11(), 4]),
+    12: (solve012, [500]),
+    13: (solve013, [CSVReader.problem13(), 10])
 }

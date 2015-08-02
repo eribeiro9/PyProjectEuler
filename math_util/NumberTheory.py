@@ -1,6 +1,7 @@
 __author__ = 'eribeiro'
 
 import math
+from math_util import Basic, General
 
 
 # region Factors/Multiples
@@ -17,7 +18,11 @@ def factors_of(num):
     return factors
 
 
-# TODO: def num_factors_of(num):
+def num_factors_of(num):
+    primes = prime_factors_of(num)
+    counts = General.count_list(primes)
+    values = counts.values()
+    return Basic.product([x + 1 for x in values])
 
 
 def sum_of_multiples_under(factors, limit):
@@ -30,6 +35,21 @@ def sum_of_multiples_under(factors, limit):
         if add:
             sum_ += multiple
     return sum_
+
+
+def smallest_multiple(limit):
+    product_ = Basic.product(range(1, limit + 1))
+    primes = primes_under(limit)
+    primes_product = Basic.product(primes)
+    max_step = product_ // primes_product
+    for multiplier in range(1, max_step + 1):
+        num = primes_product * multiplier
+        for j in range(2, limit + 1):
+            if not is_factor_of(j, num):
+                break
+        else:
+            return num
+    return product_
 
 # endregion
 

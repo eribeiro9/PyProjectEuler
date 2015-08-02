@@ -3,6 +3,9 @@ __author__ = 'eribeiro'
 import urllib.request
 import re
 
+# Currently not used, not very stable
+# Need to handle exceptions and close the request
+
 
 def html_from_url(url):
     page = urllib.request.urlopen(url)
