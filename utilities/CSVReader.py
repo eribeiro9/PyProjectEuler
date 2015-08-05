@@ -8,6 +8,12 @@ data_files_path = Constants.HOME_DIR + Constants.DATA_FILES_DIR
 
 
 def load_csv(file, as_int=False):
+    '''
+    Reads a .csv file and returns the data as a 2D list
+    :param file: Name of .csv file to read
+    :param as_int: If the data is int or string
+    :return: 2D list of data
+    '''
     rt_data = list()
     path = data_files_path + file
     with open(path, newline='') as csv_file:
@@ -33,6 +39,11 @@ def problem11():
 
 def problem13():
     data = load_csv("problem013.csv", True)
+    return data[0]
+
+
+def problem22():
+    data = load_csv("problem022.csv")
     return data[0]
 
 # endregion

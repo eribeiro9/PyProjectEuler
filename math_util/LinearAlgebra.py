@@ -8,7 +8,7 @@ __author__ = 'eribeiro'
 def dot_product(vector1, vector2):
     if len(vector1) != len(vector2):
         return
-    product = [(v1 * v2) for v1, v2 in zip(vector1, vector2)]
+    product = [v1 * v2 for v1, v2 in zip(vector1, vector2)]
     return sum(product)
 
 

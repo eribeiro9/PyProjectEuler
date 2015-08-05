@@ -7,22 +7,37 @@ from math_util import Basic, General
 # region Factors/Multiples
 
 def is_factor_of(factor, multiple):
+    '''
+    Return whether factor can divide multiple
+    '''
     return multiple % factor == 0
 
 
 def factors_of(num):
-    factors = list()
-    for factor in range(1, num + 1):
+    num_sqrt = math.floor(math.sqrt(num))
+    factors = [1]
+    add_later = list()
+    for factor in range(2, num_sqrt + 1):
         if is_factor_of(factor, num):
             factors.append(factor)
+            if factor != num_sqrt:
+                add_later.append(num // factor)
+    while len(add_later) > 0:
+        factors.append(add_later.pop())
+    factors.append(num)
     return factors
 
 
 def num_factors_of(num):
     primes = prime_factors_of(num)
-    counts = General.count_list(primes)
-    values = counts.values()
-    return Basic.product([x + 1 for x in values])
+    count_values = General.count_list(primes).values()
+    return Basic.product([x + 1 for x in count_values])
+
+
+def proper_divisors(num):
+    factors = factors_of(num)
+    factors.pop()
+    return factors
 
 
 def sum_of_multiples_under(factors, limit):
@@ -136,3 +151,32 @@ def prime_factors_of(num):
     return factors
 
 # endregion
+
+
+def nth_permutation(n, list_):
+    permutation = list()
+    num_permutations = Basic.factorial(len(list_))
+    n %= num_permutations
+    while len(list_) > 0:
+        permutations_per_index = num_permutations // len(list_)
+        index = n // permutations_per_index
+        n %= permutations_per_index
+        if n == 0 and index == 0:
+            permutation += list_
+            list_ = list()
+        else:
+            num_permutations = permutations_per_index
+            permutation.append(list_.pop(index))
+    return permutation
+
+
+def collatz_iterations(num):
+    count = 0
+    while num > 1:
+        even = num % 2 == 0
+        if even:
+            num //= 2
+        else:
+            num = 3 * num + 1
+        count += 1
+    return count
