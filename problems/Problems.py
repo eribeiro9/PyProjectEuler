@@ -160,7 +160,7 @@ def solve022(names):
     for i in range(len(names)):
         name = names[i]
         name_score = [General.letter_num(letter) for letter in name]
-        sum_ += sum(name_score)
+        sum_ += sum(name_score) * (i + 1)
     return sum_
 
 
@@ -215,7 +215,7 @@ solve_args = {
     # 19: (solve019, list()),
     20: (solve020, [100]),
     # 21: (solve021, [10000]),  # FIXME: WRONG
-    # 22: (solve022, [CSVReader.problem22()]),  # FIXME: WRONG
+    22: (solve022, [CSVReader.problem22()]),
     # 23: (solve023, list()),
     # 24: (solve024, [1000000]),  # FIXME: WRONG
     25: (solve025, [1000]),

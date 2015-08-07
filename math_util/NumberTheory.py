@@ -157,16 +157,13 @@ def nth_permutation(n, list_):
     permutation = list()
     num_permutations = Basic.factorial(len(list_))
     n %= num_permutations
-    while len(list_) > 0:
+    while n > 0:
         permutations_per_index = num_permutations // len(list_)
         index = n // permutations_per_index
         n %= permutations_per_index
-        if n == 0 and index == 0:
-            permutation += list_
-            list_ = list()
-        else:
-            num_permutations = permutations_per_index
-            permutation.append(list_.pop(index))
+        num_permutations = permutations_per_index
+        permutation.append(list_.pop(index))
+    permutation += list_
     return permutation
 
 
