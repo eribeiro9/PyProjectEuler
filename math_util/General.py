@@ -67,3 +67,9 @@ def pretty_int(num):
     triples.append(str(num))
     triples.reverse()
     return ",".join(triples)
+
+
+def key_with_max_value(dict_):
+    keys = list(dict_.keys())
+    values = list(dict_.values())
+    return keys[values.index(max(values))]

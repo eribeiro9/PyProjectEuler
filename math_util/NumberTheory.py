@@ -177,3 +177,22 @@ def collatz_iterations(num):
             num = 3 * num + 1
         count += 1
     return count
+
+
+def collatz_iterations_under(limit):
+    known = dict()
+    for i in range(1, limit):
+        count = 0
+        num = i
+        while num > 1:
+            if num in known.keys():
+                count += known[num]
+                break
+            even = num % 2 == 0
+            if even:
+                num //= 2
+            else:
+                num = 3 * num + 1
+            count += 1
+        known[i] = count
+    return known

@@ -34,7 +34,7 @@ def solve_all(spoilers=True):
     results = list()
     for problem in problems:
         results.append(solve(problem, spoilers))
-    # PrettyPrint.print_table(results)
+    # TODO: PrettyPrint.print_table(results)
 
 
 def time_solve(func, args):
@@ -47,7 +47,7 @@ def time_solve(func, args):
     start = timer()
     result = func(*args)
     end = timer()
-    return result, (end - start) * 1000
+    return result, (end - start) * 1000  # Return time in ms
 
 
 # region Problems
@@ -129,14 +129,8 @@ def solve013(nums, digits):
 
 
 def solve014(limit):
-    max_ = 0
-    max_count = 0
-    for i in range(1, limit):
-        count = NumberTheory.collatz_iterations(i)
-        if count > max_count:
-            max_ = i
-            max_count = count
-    return max_
+    iterations = NumberTheory.collatz_iterations_under(limit)
+    return General.key_with_max_value(iterations)
 
 
 def solve016(exponent):

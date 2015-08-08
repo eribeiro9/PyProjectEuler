@@ -5,7 +5,7 @@ Project Euler Problems in Python 3.4
 Run the following:
 ```
 from problems import Problems
-Problems.solve_all(apoilers)
+Problems.solve_all(spoilers)
 ```
 replacing spoilers with True or False depending on you preference and a simple table will be printed to the console containing:
  1. The problem number
