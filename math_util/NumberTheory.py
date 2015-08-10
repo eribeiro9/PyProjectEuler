@@ -7,9 +7,7 @@ from math_util import Basic, General
 # region Factors/Multiples
 
 def is_factor_of(factor, multiple):
-    '''
-    Return whether factor can divide multiple
-    '''
+    '''Return whether factor can divide multiple'''
     return multiple % factor == 0
 
 
