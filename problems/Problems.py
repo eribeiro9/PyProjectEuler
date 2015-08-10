@@ -1,7 +1,7 @@
 __author__ = 'Eric'
 
 from timeit import default_timer as timer
-from math_util import Basic, General, NumberTheory
+from math_util import Basic, General, NumberTheory, Statistics
 from utilities import CSVReader  # , PrettyPrint
 
 
@@ -133,6 +133,10 @@ def solve014(limit):
     return General.key_with_max_value(iterations)
 
 
+def solve015(size):
+    return Statistics.n_choose_k(size * 2, size)
+
+
 def solve016(exponent):
     num = 2 ** exponent
     return General.sum_of_digits(num)
@@ -202,7 +206,7 @@ solve_args = {
     12: (solve012, [500]),
     13: (solve013, [CSVReader.problem13(), 10]),
     14: (solve014, [1000000]),
-    # 15: (solve015, [20]),
+    15: (solve015, [20]),
     16: (solve016, [1000]),
     # 17: (solve017, [1000]),
     # 18: (solve018, [CSVReader.problem18()]),
