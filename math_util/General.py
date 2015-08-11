@@ -65,3 +65,13 @@ def key_with_max_value(dict_):
     keys = list(dict_.keys())
     values = list(dict_.values())
     return keys[values.index(max(values))]
+
+
+def max_two_lower(old_sums, triangle):
+    if len(triangle) <= 1 or len(old_sums) <= 2:
+        return triangle[0][0] + max(old_sums)
+    new_sums = list()
+    for i in range(len(old_sums) - 1):
+        new_sums.append(triangle[-1][i] + max(old_sums[i:i+2]))
+    triangle.pop()
+    return max_two_lower(new_sums, triangle)

@@ -142,6 +142,11 @@ def solve016(exponent):
     return General.sum_of_digits(num)
 
 
+def solve018(triangle):
+    start = triangle.pop()
+    return General.max_two_lower(start, triangle)
+
+
 def solve020(num):
     factorial = Basic.factorial(num)
     return General.sum_of_digits(factorial)
@@ -188,6 +193,11 @@ def solve028(size):
         sum_ += sum(pos)
     return sum_
 
+
+def solve067(triangle):
+    start = triangle.pop()
+    return General.max_two_lower(start, triangle)
+
 # endregion
 
 
@@ -209,7 +219,7 @@ solve_args = {
     15: (solve015, [20]),
     16: (solve016, [1000]),
     # 17: (solve017, [1000]),
-    # 18: (solve018, [CSVReader.problem18()]),
+    18: (solve018, [CSVReader.problem18()]),
     # 19: (solve019, list()),
     20: (solve020, [100]),
     # 21: (solve021, [10000]),  # FIXME: WRONG
@@ -219,6 +229,7 @@ solve_args = {
     25: (solve025, [1000]),
     # 26: (solve026, [1000]),
     # 27: (solve027, list()),
-    28: (solve028, [1001])
+    28: (solve028, [1001]),
     # 29: (solve029, [100])
+    67: (solve067, [CSVReader.problem67()])
 }

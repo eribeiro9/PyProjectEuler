@@ -42,8 +42,18 @@ def problem13():
     return data[0]
 
 
+def problem18():
+    data = load_csv("problem018.csv", True)
+    return data
+
+
 def problem22():
     data = load_csv("problem022.csv")
     return data[0]
+
+
+def problem67():
+    data = load_csv("problem067.csv", True)
+    return data
 
 # endregion
