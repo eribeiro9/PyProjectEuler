@@ -1,5 +1,7 @@
 __author__ = 'eribeiro'
 
+from utilities import CSVReader
+
 
 def is_palindrome(num):
     '''Returns whether num is a plaindrome'''
@@ -75,3 +77,20 @@ def max_two_lower(old_sums, triangle):
         new_sums.append(triangle[-1][i] + max(old_sums[i:i+2]))
     triangle.pop()
     return max_two_lower(new_sums, triangle)
+
+
+def num_as_word(num, words):
+    num_word = str()
+    if num <= 20:
+        return words[num]
+    elif num < 100:
+        return 0
+    elif num < 1000:
+        num_word += " " + words[num // 100]
+        num_word += " " + words[28]
+        if num % 100:
+            num_word += " and "
+            num_word += num_as_word(num % 100, words)
+    else:
+        return "Number not supported"
+    return num_word

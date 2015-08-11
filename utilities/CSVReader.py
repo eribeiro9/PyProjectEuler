@@ -56,4 +56,9 @@ def problem67():
     data = load_csv("problem067.csv", True)
     return data
 
+
+def number_words():
+    data = load_csv("number-words.csv")
+    return data[0]
+
 # endregion
