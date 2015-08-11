@@ -1,7 +1,5 @@
 __author__ = 'eribeiro'
 
-from utilities import CSVReader
-
 
 def is_palindrome(num):
     '''Returns whether num is a plaindrome'''
@@ -70,6 +68,12 @@ def key_with_max_value(dict_):
 
 
 def max_two_lower(old_sums, triangle):
+    '''
+    Adds each point in the last row of triangle to the greater of the two sums "below" it
+    :param old_sums: List of numerics
+    :param triangle: 2D list of numeric data points
+    :return: A list of numerics whose size is one less than old_sums
+    '''
     if len(triangle) <= 1 or len(old_sums) <= 2:
         return triangle[0][0] + max(old_sums)
     new_sums = list()
@@ -80,13 +84,17 @@ def max_two_lower(old_sums, triangle):
 
 
 def num_as_word(num, words):
+    '''Returns the number in word form (ie num_as_word(21) = Twenty One)'''
     num_word = str()
     if num <= 20:
         return words[num]
     elif num < 100:
-        return 0
+        num_word += words[num // 10 + 18]
+        if num % 10 != 0:
+            num_word += " " + words[num % 10]
+        return num_word
     elif num < 1000:
-        num_word += " " + words[num // 100]
+        num_word += words[num // 100]
         num_word += " " + words[28]
         if num % 100:
             num_word += " and "

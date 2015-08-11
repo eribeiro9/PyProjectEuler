@@ -142,6 +142,13 @@ def solve016(exponent):
     return General.sum_of_digits(num)
 
 
+def solve017(words, limit):
+    num_words = str()
+    for i in range(1, limit):
+        num_words += General.num_as_word(i, words).replace(" ", "")
+    return len(num_words)
+
+
 def solve018(triangle):
     start = triangle.pop()
     return General.max_two_lower(start, triangle)
@@ -218,7 +225,7 @@ solve_args = {
     14: (solve014, [1000000]),
     15: (solve015, [20]),
     16: (solve016, [1000]),
-    # 17: (solve017, [1000]),
+    17: (solve017, [CSVReader.number_words(), 1001]),
     18: (solve018, [CSVReader.problem18()]),
     # 19: (solve019, list()),
     20: (solve020, [100]),
