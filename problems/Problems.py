@@ -117,6 +117,10 @@ def solve010(limit):
     return sum(primes)
 
 
+def solve011(data, length):
+    return General.max_product_of(data, length)
+
+
 def solve012(limit):
     num = 2
     while NumberTheory.num_factors_of(Basic.sum_up_to(num)) <= limit:
@@ -219,13 +223,13 @@ solve_args = {
     8: (solve008, [CSVReader.problem8(), 13]),
     9: (solve009, list()),
     10: (solve010, [2000000]),
-    # 11: (solve011, [CSVReader.problem11(), 4]),
+    11: (solve011, [CSVReader.problem11(), 4]),
     12: (solve012, [500]),
     13: (solve013, [CSVReader.problem13(), 10]),
     14: (solve014, [1000000]),
     15: (solve015, [20]),
     16: (solve016, [1000]),
-    17: (solve017, [CSVReader.number_words(), 1001]),
+    # 17: (solve017, [CSVReader.number_words(), 1000]),  # FIXME: WRONG
     18: (solve018, [CSVReader.problem18()]),
     # 19: (solve019, list()),
     20: (solve020, [100]),

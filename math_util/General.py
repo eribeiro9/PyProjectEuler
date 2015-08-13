@@ -84,7 +84,7 @@ def max_two_lower(old_sums, triangle):
 
 
 def num_as_word(num, words):
-    '''Returns the number in word form (ie num_as_word(21) = Twenty One)'''
+    '''Returns the number in word form (ie num_as_word(21) = twenty one)'''
     num_word = str()
     if num <= 20:
         return words[num]
@@ -102,3 +102,26 @@ def num_as_word(num, words):
     else:
         return "Number not supported"
     return num_word
+
+
+def max_product_of(data, length):
+    max_product = 1
+    data_length = len(data[0])
+    data_height = len(data)
+    for col in range(data_length):
+        for row in range(data_height):
+            products = [1, 1, 1, 1]
+            if col <= data_length - length:
+                for i in range(length):
+                    products[0] *= data[row][col + i]
+            if row <= data_height - length:
+                for i in range(length):
+                    products[1] *= data[row + i][col]
+            if col <= data_length - length and row >= length - 1:
+                for i in range(length):
+                    products[2] *= data[row - i][col + i]
+            if col <= data_length - length and row <= data_height - length:
+                for i in range(length):
+                    products[3] *= data[row + i][col + i]
+            max_product = max(max_product, max(products))
+    return max_product
