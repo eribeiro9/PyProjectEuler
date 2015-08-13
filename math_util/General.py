@@ -46,8 +46,7 @@ def sum_of_digits(num):
     return sum(digits)
 
 
-def pretty_int(num):
-    '''Returns a string version of num with commas as thousand separators'''
+def num_to_triples(num):
     triples = list()
     while num >= 1000:
         triple = str(num % 1000)
@@ -57,7 +56,12 @@ def pretty_int(num):
         num //= 1000
     triples.append(str(num))
     triples.reverse()
-    return ",".join(triples)
+    return triples
+
+
+def pretty_int(num):
+    '''Returns a string version of num with commas as thousand separators'''
+    return ",".join(num_to_triples(num))
 
 
 def key_with_max_value(dict_):
