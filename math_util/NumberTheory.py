@@ -92,7 +92,6 @@ def first_fibonacci(limit, starts_with_two_ones=True):
 # region Primes
 
 def primes_under(limit):
-    # TODO: efficiency
     if limit <= 2:
         return list()
     primes = [2]
@@ -111,7 +110,6 @@ def primes_under(limit):
 
 
 def first_primes(limit):
-    # TODO: efficiency
     primes = [2]
     if limit < 1:
         return list()
@@ -120,7 +118,7 @@ def first_primes(limit):
     i = 3
     while len(primes) < limit:
         add = True
-        i_sqrt = math.floor(math.sqrt(i))
+        i_sqrt = math.sqrt(i)
         for prime in primes:
             if prime > i_sqrt:
                 break
@@ -129,7 +127,7 @@ def first_primes(limit):
                 break
         if add:
             primes.append(i)
-        i += 1
+        i += 2
     return primes
 
 
