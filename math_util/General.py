@@ -89,22 +89,33 @@ def max_two_lower(old_sums, triangle):
 
 def num_as_word(num, words):
     '''Returns the number in word form (ie num_as_word(21) = twenty one)'''
+    TWENTY = 17
+    HUNDRED = 27
     num_word = str()
     if num <= 20:
-        return words[num]
+        return ("", words[num - 1])[num > 0]
     elif num < 100:
-        num_word += words[num // 10 + 18]
+        num_word += words[num // 10 + TWENTY]
         if num % 10 != 0:
-            num_word += " " + words[num % 10]
+            num_word += " " + words[num % 10 - 1]
         return num_word
     elif num < 1000:
-        num_word += words[num // 100]
-        num_word += " " + words[28]
+        num_word += words[num // 100 - 1]
+        num_word += " " + words[HUNDRED]
         if num % 100:
             num_word += " and "
             num_word += num_as_word(num % 100, words)
     else:
-        return "Number not supported"
+        triple_words = [num_as_word(int(triple), words) for triple in num_to_triples(num)]
+        separators = words[HUNDRED - 1 + len(triple_words):HUNDRED:-1]
+        combined = [number + " " + separator for number, separator in zip(triple_words, separators)]
+        num_word = " ".join(combined)
+        last_triple = triple_words[-1]
+        if len(combined) > 0:
+            if "and" not in last_triple:
+                num_word += " and"
+            num_word += " "
+        num_word += last_triple
     return num_word
 
 

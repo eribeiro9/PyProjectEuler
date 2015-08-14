@@ -229,7 +229,7 @@ solve_args = {
     14: (solve014, [1000000]),
     15: (solve015, [20]),
     16: (solve016, [1000]),
-    # 17: (solve017, [CSVReader.number_words(), 1000]),  # FIXME: WRONG
+    # 17: (solve017, [CSVReader.number_words(), 1001]),  # FIXME: WRONG
     18: (solve018, [CSVReader.problem18()]),
     # 19: (solve019, list()),
     20: (solve020, [100]),
