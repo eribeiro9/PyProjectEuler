@@ -89,29 +89,29 @@ def max_two_lower(old_sums, triangle):
 
 def num_as_word(num, words):
     '''Returns the number in word form (ie num_as_word(21) = twenty one)'''
-    TWENTY = 17
-    HUNDRED = 27
+    twenty_index = words.index("twenty")
+    hundred_index = words.index("hundred")
     num_word = str()
     if num <= 20:
         return ("", words[num - 1])[num > 0]
     elif num < 100:
-        num_word += words[num // 10 + TWENTY]
+        num_word += words[num // 10 + twenty_index - 2]
         if num % 10 != 0:
             num_word += " " + words[num % 10 - 1]
         return num_word
     elif num < 1000:
         num_word += words[num // 100 - 1]
-        num_word += " " + words[HUNDRED]
+        num_word += " " + words[hundred_index]
         if num % 100:
             num_word += " and "
             num_word += num_as_word(num % 100, words)
     else:
         triple_words = [num_as_word(int(triple), words) for triple in num_to_triples(num)]
-        separators = words[HUNDRED - 1 + len(triple_words):HUNDRED:-1]
+        separators = words[hundred_index - 1 + len(triple_words):hundred_index:-1]
         combined = [number + " " + separator for number, separator in zip(triple_words, separators)]
         num_word = " ".join(combined)
         last_triple = triple_words[-1]
-        if len(combined) > 0:
+        if len(combined) > 0 and last_triple != "":
             if "and" not in last_triple:
                 num_word += " and"
             num_word += " "
@@ -140,3 +140,6 @@ def max_product_of(data, length):
                     products[3] *= data[row + i][col + i]
             max_product = max(max_product, max(products))
     return max_product
+
+
+# Given date, return day of week
